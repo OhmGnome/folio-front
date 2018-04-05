@@ -1,0 +1,29 @@
+<h4 class="center mt-5">AngularJS</h4>
+
+<hr class="hr mt-3 mb-3" />
+
+<h5 class="green-txt center">Auto Form</h5>
+
+<div class="col m12 l8 card p-3 z-depth-5">
+  <pre class="m-3"><code [innerHTML]="autoForm"></code></pre>
+  <div ngNonBindable>
+    <textarea class="txt-large">
+      <div class="form-group">
+          <label for="{{property}}" class="col-md-3">{{property}}: </label>
+          <div class="col-md-7">
+            <input class="form-control" type="text" id="{{property}}" name="{{property}}" 
+            ng-model="obj[property]" maxlength="50"/>
+          </div>
+        </div>
+        
+        <div ul-form obj="user" property="key" ng-repeat="key in userKeys"
+          ng-if="typeof user[key] === 'string' && key !== '$$hashKey'"></div>
+  </textarea>
+  </div>
+</div>
+
+<div class="col s12 txt-large mt-3 mb-3">
+  This directive takes any object and produces a form from it.
+</div>
+
+<hr class="hr mt-3 mb-3" />

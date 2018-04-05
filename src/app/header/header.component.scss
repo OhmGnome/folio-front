@@ -1,0 +1,17 @@
+nav .brand-logo {
+    left: 3%;
+}
+
+nav, nav * {
+    z-index: 100
+}
+
+@media ( max-width : 767px) {
+    nav{
+        position: fixed
+    }
+    a{
+        font-size: 0.75rem;
+    }
+}
+

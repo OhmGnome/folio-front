@@ -1,0 +1,72 @@
+<h4 class="center mt-5">Angular</h4>
+
+<hr class="hr mt-3 mb-3" />
+
+<h5 class="green-txt center">Property Pipe</h5>
+
+<div class="col m12 l8 card p-3 z-depth-5">
+  <pre class="m-3"><code [innerHTML]="propPipe"></code></pre>
+</div>
+
+<div class="col s12 txt-large mt-3 mb-3">
+  This pipe is reusable because it doesn't specify which property it is filtering by, it is passed the property to filter by.
+  The below example filters by visited like: let n of resorts | prop:'visited':true" , but it could just as easily filter
+  by name like: let n of resorts | prop:'name':'Breckenridge".
+</div>
+
+<div class="col s12 m6">
+  <p class="txt-large mt-4 col s12 teal-txt">Resorts Visited</p>
+  <div *ngFor="let n of resorts | prop:'visited':true" class="col s12 mt-3">
+    <div class="col s6">
+      {{n.name}}
+    </div>
+    <div class="col s6">
+      <mat-slide-toggle [checked]="n.visited" [(ngModel)]="n.visited" (ngModelChange)="updateResorts(n)"></mat-slide-toggle>
+    </div>
+  </div>
+</div>
+
+<div class="col s12 m6">
+  <p class="txt-large mt-4 col s12 teal-txt">Resorts Not Visited</p>
+  <div *ngFor="let n of resorts | prop:'visited':false" class="col s12 mt-3">
+    <div class="col s6">
+      {{n.name}}
+    </div>
+    <div class="col s6">
+      <mat-slide-toggle [checked]="n.visited" [(ngModel)]="n.visited" (ngModelChange)="updateResorts(n)"></mat-slide-toggle>
+    </div>
+  </div>
+</div>
+
+<hr class="hr mt-3 mb-3" />
+
+<h5 class="green-txt center">Split Pipe</h5>
+
+<div class="col m12 l8 card p-3 z-depth-5">
+  <pre class="m-3"><code [innerHTML]="splitPipe"></code></pre>
+</div>
+
+<hr class="hr mt-3 mb-3" />
+
+<h5 class="green-txt center">To Fixed Pipe</h5>
+
+<div class="col m12 l8 card p-3 z-depth-5">
+  <pre class="m-3"><code [innerHTML]="toFixedPipe"></code></pre>
+</div>
+
+<hr class="hr mt-3 mb-3" />
+
+<h5 class="green-txt center">Generic Endpoints</h5>
+
+<div class="col m12 l8 card p-3 z-depth-5">
+  <pre class="m-3"><code [innerHTML]="genericEndpoints"></code></pre>
+  <p>And in the child class constructor...</p>
+  <pre class="m-3"><code [innerHTML]="genericEndpointsConstructor"></code></pre>
+</div>
+
+<div class="col s12 txt-large mt-3 mb-3">
+  The generic endpoints can receive data from any standard REST model. It was made specifically for the REST methods
+  provided by a spring data repository.
+</div>
+
+<hr class="hr mt-3 mb-3" />

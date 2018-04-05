@@ -1,0 +1,131 @@
+==================
+
+
+legend
++ a div
+- a component
+> a shared component that lives in the shared folder
+. not a component
+p a print subcomponent that lives in the print folder
+
+app
+<header>
+<router>
+<footer>
+
+header
+-brand logos
+-menu large
+-menu phone
+.faqMenu
+
+footer
+-awards
+.shield
+-contact us
+-siteMap
+-social media
+.copywrite
+
+start component contains child components
++main
+>step-indicator
+-startQuoteform
+-faq
+>error modals
+>addressError modal
+>exlusionsModal
+>disclaimerModal
++sub
+>3targeters url=''
+
+quote 
+>step-indicator
++planComparator
+-planComparator (mobile)
+-planComparator-table
+-addons
+-stock details   (the byo/addon details modal)
+-faq
++sidebar
+p print address type=covered
+-editProperty
+-service fee
+-cart
+-promo
+-quoteActions
+>email quote modal
+>error modals
+>addressError modal
+>disclaimerModal
+
+checkout
+>step-indicator
++billing
+-payment info
+-contact info
+-address mailing
+-address billing
++sidebar
+p print address type=covered
+-tsf collapsed
+-cart
+.efulfill
+-quoteActions
+>email quote modal
+(might try cart service to save the service fee here, or create a serviceFee service 
+from the saveServiceFee endpoint (or delete it)) 
+
+
+confirm
+>step-indicator
+p print coverage details
+p print order details
+p print address type=covered 
+p print address type=mailing 
+p print address type=billing 
+-my account link
++sidebar2
+-additional property (different implementations of the same component)
+-refer a friend?
+
+
+print quote
+p print coverage details
+p print order details
+p print address type=covered
+p print address type=billing
+
+
+core
+services
+-address (smarty streets was zip)
+-plan
+-price
+-cart
+-profile
+-promo
+-targeter
+-config
+stores
+model (class/interfaces)
+-addons
+-byos
+-address
+-inventory
+-cart
+
+
+shared (components)
+>error modal
+>addressError modal
+>exlusionsModal
+>disclaimerModal
+>spinner
+>email quote modal
+>targeter
+>state select or UI
+>help
+>step-indicator
+
+=====================
