@@ -10,14 +10,6 @@ interface Product {
 
  //TODO
 export interface Plans {
-	// systems?: Plan
-	// appliances?: Plan
-	// combo?: Plan
-    // buildyourown?: Plan
-    // prod430103?: Plan
-    // prod430102?: Plan
-    // prod430101?: Plan
-    // prod430104?: Plan
     [index: string]: Plan
 }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { toFixedPipe, splitPipe, propPipe, genericEndpoints, genericEndpointsConstructor } from '../../core/constant/printAngular';
+import { splitPipe, propPipe, genericEndpoints, genericEndpointsConstructor } from '../../core/constant/printAngular';
 
 @Component({
   selector: 'app-angular-reusables',
@@ -11,7 +11,6 @@ export class AngularReusablesComponent implements OnInit {
   resorts: any[]
   propPipe = propPipe
   splitPipe = splitPipe
-  toFixedPipe = toFixedPipe
   genericEndpoints = genericEndpoints
   genericEndpointsConstructor = genericEndpointsConstructor
 
