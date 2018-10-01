@@ -20,7 +20,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build !important
 
-Run `ng build` to build the project. The build artifacts will be stored in the `distD2C/` directory. Use the `--prod` flag and `-env=prod` for a production build. like `ng build --prod -env=prod`
+Run `ng build` to build the project. The build artifacts will be stored in the `/web-inf/dist` directory. Use the `--prod` flag and `--env=prod` for a production build. like `ng build --prod --env=prod --output-hashing none`
 
 ## Running unit tests
 
